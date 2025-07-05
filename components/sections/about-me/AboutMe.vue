@@ -43,12 +43,9 @@ onMounted(() => {
     </h1>
 
     <p class="text-justify leading-relaxed lg:text-base">
-
-      This website is a personal initiative I built to explore the fundamentals of web
-      development and better understand the technologies behind modern websites.
-      Although my current focus is on frontend experiments, my main interest lies in pursuing a career in IT Support or
-      Network Operations (NOC). I'm still early in my learning journey, but I'm committed to growing in that direction.
-
-    </p>
+      I use this site to keep track of my learning process — so I can see how far I’ve come and where I’m heading.
+      No fancy goals, just a way to understand what I’m learning, and keep everything documented
+      honestly.
+      It’s not a polished skill showcase — it’s a growing record of the process itself. </p>
   </div>
 </template>
