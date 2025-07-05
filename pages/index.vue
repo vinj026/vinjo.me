@@ -6,5 +6,6 @@ definePageMeta({
 <template>
   <main class="flex flex-col gap-4 w-full max-w-2xl">
     <AboutMe />
+    <LearningJournals />
   </main>
 </template>
