@@ -12,7 +12,12 @@ export default defineNuxtConfig({
   components: [{
     path: '~/components/sections',
     pathPrefix: false,
-  }],
+  },
+  {
+    path: '~/components/ui',
+    pathPrefix: false,
+  }
+  ],
   compatibilityDate: '2025-05-15',
   devtools: { enabled: false },
 

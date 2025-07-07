@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col gap-2 w-full">
-    <h1 class="lg:text-2xl">Learning Journal</h1>
+  <ContentContainer title="My Journal">
     <div class="flex flex-col gap-4">
       <BlogContent />
     </div>
-  </div>
+  </ContentContainer>
+
 </template>

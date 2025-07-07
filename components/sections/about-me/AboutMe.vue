@@ -17,35 +17,31 @@ const greetings = ref(
     selectedLang: "Hello, I'm Kevin",
   }
 )
-let i = 0;
+
+let i = 0
+let interval
 
 onMounted(() => {
-
-  const interval = setInterval(() => {
-    if (i > greetings.value.lang.length - 1) {
-      i = 0
-    } else {
-      greetings.value.selectedLang = greetings.value.lang[i].text
-      console.log(greetings.value.lang[i].text)
-      ++i
-    }
+  interval = setInterval(() => {
+    greetings.value.selectedLang = greetings.value.lang[i].text
+    i = (i + 1) % greetings.value.lang.length
   }, 3000)
-  onUnmounted(() => clearInterval(interval))
 })
 
+onUnmounted(() => {
+  clearInterval(interval)
+})
 
 
 </script>
 <template>
-  <div class="flex flex-col gap-2 w-full">
-    <h1 class="lg:text-2xl">
-      {{ greetings.selectedLang }}
-    </h1>
-
+  <ContentContainer :title="greetings.selectedLang">
     <p class="text-justify leading-relaxed lg:text-base">
       I use this site to keep track of my learning process — so I can see how far I’ve come and where I’m heading.
       No fancy goals, just a way to understand what I’m learning, and keep everything documented
       honestly.
       It’s not a polished skill showcase — it’s a growing record of the process itself. </p>
-  </div>
+
+  </ContentContainer>
+
 </template>

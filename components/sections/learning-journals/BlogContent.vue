@@ -25,4 +25,5 @@ const { data: posts } = await useAsyncData(route.path, () => {
     </div>
     <hr class="text-zinc-800 mt-2">
   </div>
+
 </template>

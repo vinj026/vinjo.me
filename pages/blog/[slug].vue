@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: 'post-layout'
+  layout: 'home-layout'
 })
 const route = useRoute()
 

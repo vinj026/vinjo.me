@@ -4,8 +4,11 @@ definePageMeta({
 })
 </script>
 <template>
-  <main class="flex flex-col gap-4 w-full lg:max-w-lg">
-    <AboutMe />
-    <LearningJournals />
+  <main class="flex flex-col gap-4 md:gap-6  w-full md:grid md:grid-cols-[max-content_auto] sm:max-w-4xl">
+    <Profile />
+    <div class="flex flex-col gap-4 md:gap-6">
+      <AboutMe />
+      <LearningJournals />
+    </div>
   </main>
 </template>
