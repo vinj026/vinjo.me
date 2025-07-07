@@ -4,7 +4,7 @@ definePageMeta({
 })
 </script>
 <template>
-  <main class="flex flex-col gap-4 w-full max-w-2xl">
+  <main class="flex flex-col gap-4 w-full lg:max-w-lg">
     <AboutMe />
     <LearningJournals />
   </main>

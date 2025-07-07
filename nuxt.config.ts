@@ -2,6 +2,13 @@
 
 import tailwindcss from "@tailwindcss/vite"
 export default defineNuxtConfig({
+  modules: [
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    'nuxt-lucide-icons'
+  ],
   components: [{
     path: '~/components/sections',
     pathPrefix: false,
@@ -10,18 +17,48 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   css: ['~/assets/css/main.css'],
+  content: {
+    renderer: {
+      anchorLinks: false
+    },
+    build: {
+      markdown: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: 'vitesse-dark',
+          langs: [
+            'c',
+            'cpp',
+            'js'
+          ]
+        }
+      }
+    }
+  },
+  hooks: {
+    'content:file:beforeParse'(ctx) {
+      const { file } = ctx;
+
+      if (file.id.endsWith(".md")) {
+        file.body = file.body.replace(/react/gi, "Vue");
+      }
+    },
+    'content:file:afterParse'(ctx) {
+      const { file, content } = ctx;
+
+      const wordsPerMinute = 180;
+      const text = typeof file.body === 'string' ? file.body : '';
+      const wordCount = text.split(/\s+/).length;
+
+      content.readingTime = Math.ceil(wordCount / wordsPerMinute);
+    }
+  },
   vite: {
     plugins: [
       tailwindcss()
     ]
   },
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    'nuxt-lucide-icons'
-  ],
+
   app: {
     head: {
       title: "Kevin Jonathan | Personal Site",

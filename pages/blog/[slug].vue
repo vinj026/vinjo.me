@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<script setup>
+definePageMeta({
+  layout: 'post-layout'
+})
 const route = useRoute()
 
 const { data: post } = await useAsyncData(() =>
@@ -9,9 +12,35 @@ useSeoMeta({
   title: post.value?.title,
   description: post.value?.description
 })
+
+console.log(post.value)
 </script>
 
 <template>
-  <ContentRenderer v-if="post" :value="post" />
-  <p v-else>Post not found</p>
+
+  <main class="flex flex-col gap-2 w-full sm:max-w-2xl">
+    <aside />
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h1 class="lg:text-4xl">{{ post.title }}</h1>
+        <p class="text-gray-500 text-sm">
+          Posted on {{ new Date(post.date).toLocaleDateString('id-ID', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          }) }}
+          - {{ post.readingTime }} Min Read
+        </p>
+
+      </div>
+      <div class="flex gap-2">
+        <p v-for="tag in post.tags" :key="tag" class="bg-zinc-700 px-2 rounded-sm text-sm"> #{{ tag }}</p>
+      </div>
+      <hr>
+    </div>
+    <div v-if="post" class="prose prose-sm lg:prose-base p-0 dark:prose-invert max-w-none">
+      <ContentRenderer :value="post" class="text-justify" />
+    </div>
+    <p v-else>Post not found</p>
+  </main>
 </template>
