@@ -1,7 +1,7 @@
 ---
 title: "Another Day, Another Debug"
 description: "Just another test post filled with random thoughts and code chaos."
-date: 2025-07-06
+date: 2024-07-06
 tags: ["debugging", "random", "testing"]
 img: /images/blog/debug-life.jpg
 ---
