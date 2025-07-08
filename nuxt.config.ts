@@ -16,7 +16,11 @@ export default defineNuxtConfig({
   {
     path: '~/components/ui',
     pathPrefix: false,
-  }
+  },
+  {
+    path: '~/components/common',
+    pathPrefix: false,
+  },
   ],
   compatibilityDate: '2025-05-15',
   devtools: { enabled: false },
