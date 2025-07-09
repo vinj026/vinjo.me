@@ -22,14 +22,13 @@ console.log(groupedByYear.value)
 </script>
 
 <template>
-  <div class="flex flex-col items-center w-full gap-8 max-w-3xl">
+  <div class="flex flex-col items-center w-full gap-8 ">
     <div class="w-full">
       <h1>My Journal</h1>
     </div>
     <div class="flex flex-col w-full gap-8">
 
-      <div
-v-for="year in Object.keys(groupedByYear).sort((a, b) => b - a)" :key="year"
+      <div v-for="year in Object.keys(groupedByYear).sort((a, b) => b - a)" :key="year"
         class="flex flex-col w-full gap-2">
         <h2>{{ year }}</h2>
 

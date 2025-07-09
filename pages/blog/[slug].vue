@@ -20,7 +20,7 @@ function scrollToTop() {
 
 <template>
 
-  <div class="flex flex-col gap-2 w-full sm:max-w-2xl">
+  <div class="flex flex-col gap-2 w-full ">
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
         <h1 class="lg:text-4xl">{{ post.title }}</h1>
