@@ -14,6 +14,7 @@ const menu = ref([
     link: "/"
   }
 ])
+const cv = "/CV_Kevin_Jonathan_June2025.pdf"
 
 </script>
 
@@ -33,12 +34,12 @@ const menu = ref([
 
         <!-- CV Button -->
         <li>
-          <a
-href="/cv.pdf" target="_blank" rel="noopener noreferrer"
+          <NuxtLink
+to="/files/cv.pdf" target="_blank" rel="noopener noreferrer"
             class="flex items-center gap-2 px-3 py-1 rounded text-sm text-white bg-zinc-800 hover:bg-zinc-700 transition-colors duration-300">
             <LucideFileText class="w-4 h-4" />
             <span>My CV</span>
-          </a>
+          </NuxtLink>
         </li>
       </ul>
     </div>
