@@ -21,26 +21,35 @@ const groupedByYear = computed(() => {
 console.log(groupedByYear.value)
 </script>
 
+
 <template>
-  <div class="flex flex-col items-center w-full gap-8 mt-16 ">
+  <div class="flex flex-col items-center w-full gap-8 mt-16">
     <div class="w-full">
-      <h1>My Journal</h1>
+      <h1 class="text-2xl font-semibold">My Journal</h1>
     </div>
+
     <div class="flex flex-col w-full gap-8">
+      <template v-if="Object.keys(groupedByYear).length > 0">
+        <div v-for="year in Object.keys(groupedByYear).sort((a, b) => b - a)" :key="year"
+          class="flex flex-col w-full gap-2">
+          <h2 class="text-lg font-medium text-zinc-100">{{ year }}</h2>
+          <ul class="pl-4">
+            <li v-for="post in groupedByYear[year]" :key="post.path"
+              class="flex justify-between gap-4 py-1 text-sm border-b border-zinc-800">
+              <NuxtLink :to="post.path" class="hover:underline text-zinc-100">
+                {{ post.title }}
+              </NuxtLink>
+              <p class="text-zinc-500">{{ post.date }}</p>
+            </li>
+          </ul>
+        </div>
+      </template>
 
-      <div v-for="year in Object.keys(groupedByYear).sort((a, b) => b - a)" :key="year"
-        class="flex flex-col w-full gap-2">
-        <h2>{{ year }}</h2>
-
-        <ul class="pl-5">
-          <li v-for="post in groupedByYear[year]" :key="post.path" class="flex justify-between gap-10 ">
-            <NuxtLink :to="post.path" class="hover:underline">
-              {{ post.title }}
-            </NuxtLink>
-            <p>{{ post.date }}</p>
-          </li>
-        </ul>
-      </div>
+      <template v-else>
+        <div class="w-full py-16 text-center text-zinc-500 italic text-sm">
+          No journal entries found yet.
+        </div>
+      </template>
     </div>
   </div>
 </template>
