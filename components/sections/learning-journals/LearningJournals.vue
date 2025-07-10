@@ -1,5 +1,5 @@
 <template>
-  <ContentContainer title="My Journal">
+  <ContentContainer title="Learning Journal">
     <div class="flex flex-col gap-4 w-full">
       <BlogContent />
     </div>

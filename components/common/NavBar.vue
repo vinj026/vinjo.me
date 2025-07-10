@@ -6,7 +6,7 @@ const menu = ref([
     link: "/"
   },
   {
-    name: "writing",
+    name: "my journal",
     link: "/"
   },
   {
@@ -14,16 +14,15 @@ const menu = ref([
     link: "/"
   }
 ])
-const cv = "/CV_Kevin_Jonathan_June2025.pdf"
 
 </script>
 
 <template>
-  <nav class="sticky top-0 z-10 w-full bg-black/50 backdrop-blur py-4">
+  <nav class="sticky top-0 z-10 w-full backdrop-blur py-4">
     <div class="flex w-full max-w-6xl mx-auto px-4 justify-between items-center">
       <NuxtImg src="/images/kejo.svg" class="w-10" />
 
-      <ul class="flex items-center gap-4">
+      <ul class="flex items-center gap-6">
         <li v-for="item in menu" :key="item.name" class="relative py-1">
           <NuxtLink
 :to="item.link"
