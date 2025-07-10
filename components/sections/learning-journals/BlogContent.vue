@@ -13,7 +13,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
     <div class="flex flex-col gap-4 w-full">
       <div class="flex flex-col ">
         <p class="text-xs pt-2 sm:text-sm ">{{ post.date }}</p>
-        <NuxtLink :to="post.path" class="flex items-start justify-between text-xl text-gray-100 font-semibold ">{{
+        <NuxtLink :to="post.path" class="flex items-start justify-between text-lg text-gray-100 font-semibold ">{{
           post.title }}
 
           <LucideChevronRight class="mt-1" />

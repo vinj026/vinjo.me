@@ -8,6 +8,7 @@ definePageMeta({
 
     <Profile />
     <AboutMe />
+    <SocialMedia />
     <LearningJournals />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup>
-import { Github, Linkedin, FileText, Mail } from 'lucide-vue-next'
+import { Github, Linkedin, Mail } from 'lucide-vue-next'
 
 const socialMedia = ref([
   {

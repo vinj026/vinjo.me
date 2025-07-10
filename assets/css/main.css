@@ -51,12 +51,12 @@ body,
   h2 {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--color-gray-300);
+    color: var(--color-gray-100);
   }
 
   h3 {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-gray-300);
+    color: var(--color-gray-100);
   }
 }
