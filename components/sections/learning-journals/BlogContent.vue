@@ -1,19 +1,15 @@
 <script setup>
-
-const route = useRoute()
-const { data: posts } = await useAsyncData(route.path, () => {
-  return queryCollection('blog')
-    .order('date', 'DESC').limit(3)
-    .all()
-})
-
+defineProps(
+  {
+    shownpost: Array,
+  }
+)
 </script>
-
 <template>
   <div>
-    <template v-if="posts.length > 0">
+    <template v-if="shownpost.length > 0">
       <div class="flex flex-col gap-4">
-        <div v-for="post in posts" :key="post.path" class="flex flex-col gap-4 w-full">
+        <div v-for="post in shownpost" :key="post.path" class="flex flex-col gap-4 w-full">
           <div class="flex flex-col">
             <p class="text-xs pt-2 sm:text-sm">{{ post.date }}</p>
             <NuxtLink :to="post.path" class="flex items-start justify-between text-lg text-gray-100 font-semibold">
