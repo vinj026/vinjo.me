@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: "home-layout"
+  layout: "default"
 })
 
 const { data: posts } = await useAsyncData(() => queryCollection('blog').all())
