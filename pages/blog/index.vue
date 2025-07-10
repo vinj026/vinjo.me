@@ -22,7 +22,7 @@ console.log(groupedByYear.value)
 </script>
 
 <template>
-  <div class="flex flex-col items-center w-full gap-8 ">
+  <div class="flex flex-col items-center w-full gap-8 mt-16 ">
     <div class="w-full">
       <h1>My Journal</h1>
     </div>
