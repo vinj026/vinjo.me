@@ -37,7 +37,7 @@ onUnmounted(() => {
 <template>
   <ContentContainer>
     <h1>{{ greetings.selectedLang }}</h1>
-    <p class="text-justify leading-relaxed lg:text-base">
+    <p class="text-justify leading-relaxed">
       I use this site to keep track of my learning process — so I can see how far I’ve come and where I’m heading.
       No fancy goals, just a way to understand what I’m learning, and keep everything documented
       honestly.

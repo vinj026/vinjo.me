@@ -1,14 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-:root,
-body,
-#__nuxt {
-  background-color: #080808;
-  height: 100vh;
-  color: #f9f9f9;
-}
-
 
 @theme {
   --color-black-50: #727272;
@@ -23,39 +15,37 @@ body,
   --color-black-900: #151515;
   --color-black-950: #111111;
 
-  --color-white-50: #ffffff;
-  --color-white-100: #fcfcfc;
-  --color-white-200: #f9f9f9;
-  --color-white-300: #f7f7f7;
-  --color-white-400: #cfcfcf;
-  --color-white-500: #a8a8a8;
-  --color-white-600: #868686;
-  --color-white-700: #636363;
-  --color-white-800: #424242;
-  --color-white-900: #242424;
-  --color-white-950: #151515;
+
+}
+
+:root,
+body,
+#__nuxt {
+  background-color: var(--color-black-950);
+  height: 100vh;
+  color: #f9f9f9;
 }
 
 @layer base {
   p {
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
     color: var(--color-gray-300);
   }
 
   h1 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-black);
     color: var(--color-gray-100);
   }
 
   h2 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     font-weight: var(--font-weight-bold);
     color: var(--color-gray-100);
   }
 
   h3 {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     font-weight: var(--font-weight-semibold);
     color: var(--color-gray-100);
   }
