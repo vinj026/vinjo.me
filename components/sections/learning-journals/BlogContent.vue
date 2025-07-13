@@ -12,7 +12,7 @@ defineProps(
         <div v-for="post in shownpost" :key="post.path" class="flex flex-col gap-4 w-full">
           <div class="flex flex-col">
             <p class="text-xs pt-2 sm:text-sm">{{ post.date }}</p>
-            <NuxtLink :to="post.path" class="flex items-start justify-between text-lg text-gray-100 font-semibold">
+            <NuxtLink :to="post.path" class="flex items-start justify-between text-lg font-semibold">
               {{ post.title }}
               <LucideChevronRight class="mt-1" />
             </NuxtLink>
@@ -27,7 +27,7 @@ defineProps(
       </div>
     </template>
     <template v-else>
-      <div class="text-center text-sm text-zinc-500 py-10 italic">
+      <div class="text-center text-sm py-10 italic">
         No posts found. Stay tuned for updates!
       </div>
     </template>

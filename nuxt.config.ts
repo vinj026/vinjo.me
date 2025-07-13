@@ -78,7 +78,10 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'author', content: 'Kevin Jonathan' },
         { name: 'robots', content: 'index, follow' },
-      ]
+      ],
+      htmlAttrs: {
+        class: 'dark'
+      }
     },
   },
   runtimeConfig: {
