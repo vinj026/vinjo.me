@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
-    'nuxt-lucide-icons'
+    'nuxt-lucide-icons',
+    '@nuxtjs/leaflet'
   ],
   components: [{
     path: '~/components/sections',
@@ -78,5 +79,10 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow' },
       ]
     },
+  },
+  runtimeConfig: {
+    public: {
+      MAPTILER_KEY: process.env.NUXT_PUBLIC_MAPTILER_KEY
+    }
   }
 })
