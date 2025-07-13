@@ -5,26 +5,36 @@ const center = [-1.23919, 116.85869] // Balikpapan
 const tileUrl = `https://api.maptiler.com/maps/streets-v2-dark/{z}/{x}/{y}.png?key=${config.public.MAPTILER_KEY}`
 </script>
 
-<template>
-  <div class="relative h-full ">
-    <div class="absolute z-10 left-3 bottom-3 bg-black-900  rounded-xl border border-black-600 ">
-      <div class="flex px-2 py-1 justify-center items-center">
 
-        <p class="text-xs text-zinc-400 font-bold">My Location</p>
+<template>
+  <div class="relative h-full group ">
+    <!-- Pin + Hover Text -->
+    <div class="absolute z-10 left-3 bottom-3 flex items-center gap-1">
+      <!-- Pin -->
+      <div class="p-2 bg-black-900 rounded-2xl border border-black-600">
+        <LucideMapPin class="w-3 h-3 text-zinc-300" />
+      </div>
+
+      <!-- Text muncul dari kiri -->
+      <div class="bg-black-900 text-xs text-zinc-300 font-medium px-3 py-1 rounded-xl border border-black-600 
+               opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 
+               transition-all duration-300">
+        Balikpapan, Indonesia
       </div>
     </div>
-    <LMap :zoom="15" :options="{
-      zoomControl: false,
-      attributionControl: false,
-      dragging: false,
-    }" :min-zoom="5" :max-zoom="20" :center="center" :scroll-wheel-zoom="true"
+
+    <!-- Map -->
+    <LMap :zoom="5" :center="center" :min-zoom="0" :max-zoom="50" :scroll-wheel-zoom="false"
+      :options="{ zoomControl: false, attributionControl: false, dragging: false }"
       class="grayscale brightness-[0.45] h-full min-h-full w-full rounded-2xl outline-none">
       <LTileLayer :url="tileUrl" />
     </LMap>
+
+    <!-- Ping marker -->
     <div className='absolute inset-0 flex items-center justify-center'>
       <span class="relative flex size-3"> <span
-          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" /> <span
-          class="relative inline-flex size-3 rounded-full bg-emerald-500 opacity-50" /></span>
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-55" /> <span
+          class="relative inline-flex size-3 rounded-full bg-emerald-500 opacity-35" /></span>
     </div>
   </div>
 </template>

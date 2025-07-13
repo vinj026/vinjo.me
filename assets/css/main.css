@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
+@import 'leaflet/dist/leaflet.css';
 
 @theme {
   --color-black-50: #727272;
