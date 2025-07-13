@@ -14,6 +14,7 @@ definePageMeta({
       <SocialMedia />
     </div>
     <LearningJournals />
+    <RippleButton>ClickME</RippleButton>
 
     <MyToolkit />
   </div>

@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     'nuxt-lucide-icons',
-    '@nuxtjs/leaflet'
+    '@nuxtjs/leaflet',
+    'motion-v/nuxt'
   ],
   components: [{
     path: '~/components/sections',
