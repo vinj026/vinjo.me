@@ -7,7 +7,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-display: "Roboto Mono", "monospace";
   --color-black-50: #727272;
   --color-black-100: #6a6a6a;
   --color-black-200: #5e5e5e;
@@ -121,6 +120,7 @@ body,
 #__nuxt {
   height: 100vh;
   color: #f9f9f9;
+  font-family: "Roboto Mono", monospace;
   @apply bg-background text-foreground;
 
 }
