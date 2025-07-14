@@ -19,7 +19,7 @@ function closeMenu() {
   <nav class="sticky top-0 z-50 w-full backdrop-blur py-4 bg-background/70">
     <div class="flex w-full max-w-6xl mx-auto px-4 justify-between items-center">
       <!-- Logo -->
-      <NuxtImg src="/images/kejo.svg" class="w-10" />
+      <NuxtImg src="/images/kejo.svg" class="w-10" alt="logo" />
 
       <!-- Burger (mobile) -->
       <button class="sm:hidden text-zinc-300 hover:text-white" aria-label="Toggle Menu" @click="isOpen = !isOpen">
