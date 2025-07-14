@@ -15,6 +15,7 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/leaflet": "^1.2.6",
+    "@nuxtjs/partytown": "^1.6.0",
     "@tailwindcss/vite": "^4.1.11",
     "@vueuse/core": "^13.5.0",
     "better-sqlite3": "^12.2.0",

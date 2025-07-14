@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     'nuxt-lucide-icons',
     '@nuxtjs/leaflet',
     'motion-v/nuxt',
+    '@nuxtjs/partytown'
   ],
   components: [{
     path: '~/components/sections',
