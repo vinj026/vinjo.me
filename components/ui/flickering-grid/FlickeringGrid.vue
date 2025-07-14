@@ -1,18 +1,10 @@
 <template>
-  <div
-    ref="containerRef"
-    :class="cn('w-full h-full', props.class)"
-  >
-    <canvas
-      ref="canvasRef"
-      class="pointer-events-none"
-      :width="canvasSize.width"
-      :height="canvasSize.height"
-    />
+  <div ref="containerRef" :class="cn('w-full h-full', props.class)">
+    <canvas ref="canvasRef" class="pointer-events-none" :width="canvasSize.width" :height="canvasSize.height" />
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup type="text/partytown">
 import { cn } from "@/lib/utils";
 import { ref, onMounted, onBeforeUnmount, toRefs, computed } from "vue";
 
