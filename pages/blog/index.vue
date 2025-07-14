@@ -34,9 +34,8 @@ console.log(groupedByYear.value)
           class="flex flex-col w-full gap-2">
           <h2 class="text-lg font-medium text-zinc-100">{{ year }}</h2>
           <ul class="pl-4">
-            <li v-for="post in groupedByYear[year]" :key="post.path"
-              class="flex justify-between gap-4 py-1 text-sm border-b border-zinc-800">
-              <NuxtLink :to="post.path" class="hover:underline text-zinc-100">
+            <li v-for="post in groupedByYear[year]" :key="post.path" class="flex justify-between gap-4 py-1 text-sm">
+              <NuxtLink :to="post.path">
                 {{ post.title }}
               </NuxtLink>
               <p class="text-zinc-500">{{ post.date }}</p>
