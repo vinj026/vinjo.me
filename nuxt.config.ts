@@ -81,7 +81,10 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: {
         class: 'dark'
-      }
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
     },
   },
   runtimeConfig: {
