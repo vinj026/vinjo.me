@@ -7,7 +7,8 @@ const tileUrl = `https://api.maptiler.com/maps/streets-v2-dark/{z}/{x}/{y}.png?k
 
 
 <template>
-  <div class="relative h-full group ">
+
+  <div class="relative h-40 md:h-full group ">
     <!-- Pin + Hover Text -->
     <div class="absolute z-10 left-3 bottom-3 flex items-center gap-1">
       <!-- Pin -->
@@ -24,9 +25,9 @@ const tileUrl = `https://api.maptiler.com/maps/streets-v2-dark/{z}/{x}/{y}.png?k
     </div>
 
     <!-- Map -->
-    <LMap :zoom="5" :center="center" :min-zoom="0" :max-zoom="50" :scroll-wheel-zoom="false"
-      :options="{ zoomControl: false, attributionControl: false, dragging: false }"
-      class="grayscale brightness-[0.45] h-full min-h-full w-full rounded-2xl outline-none">
+    <LMap :zoom="10" :center="center" :min-zoom="0" :max-zoom="50" :scroll-wheel-zoom="false"
+      :options="{ zoomControl: false, attributionControl: false, dragging: false, touchZoom: false }"
+      class="grayscale brightness-[0.45]  h-full min-h-full w-full rounded-2xl outline-none">
       <LTileLayer :url="tileUrl" />
     </LMap>
 
@@ -37,4 +38,5 @@ const tileUrl = `https://api.maptiler.com/maps/streets-v2-dark/{z}/{x}/{y}.png?k
           class="relative inline-flex size-3 rounded-full bg-emerald-500 opacity-35" /></span>
     </div>
   </div>
+
 </template>

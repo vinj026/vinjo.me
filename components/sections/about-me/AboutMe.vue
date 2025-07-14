@@ -17,32 +17,41 @@ const greetings = ref(
     selectedLang: "Hello, I'm Kevin",
   }
 )
-
-let i = 0
-let interval
+let i = 0;
 
 onMounted(() => {
-  interval = setInterval(() => {
-    greetings.value.selectedLang = greetings.value.lang[i].text
-    i = (i + 1) % greetings.value.lang.length
+
+  const interval = setInterval(() => {
+    if (i > greetings.value.lang.length - 1) {
+      i = 0
+    } else {
+      greetings.value.selectedLang = greetings.value.lang[i].text
+      console.log(greetings.value.lang[i].text)
+      ++i
+    }
   }, 3000)
+  onUnmounted(() => clearInterval(interval))
 })
 
-onUnmounted(() => {
-  clearInterval(interval)
-})
 
 
 </script>
 <template>
-  <ContentContainer>
-    <h1>{{ greetings.selectedLang }}</h1>
-    <p class="text-justify leading-relaxed">
+  <div class="flex flex-col gap-2 w-full">
+    <Transition
+enter-active-class="transition duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
+      enter-from-class="opacity-0 translate-y-2" enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
+      leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-2" mode="out-in">
+      <h1 :key="greetings.selectedLang" class=" font-bold tracking-tight">
+        {{ greetings.selectedLang }}
+      </h1>
+    </Transition>
+
+    <p class="text-justify leading-relaxed ">
       I use this site to keep track of my learning process — so I can see how far I’ve come and where I’m heading.
       No fancy goals, just a way to understand what I’m learning, and keep everything documented
       honestly.
       It’s not a polished skill showcase — it’s a growing record of the process itself. </p>
-
-  </ContentContainer>
-
+  </div>
 </template>

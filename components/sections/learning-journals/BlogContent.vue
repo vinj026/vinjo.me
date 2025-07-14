@@ -11,14 +11,14 @@ defineProps(
       <div class="flex flex-col gap-4">
         <div v-for="post in shownpost" :key="post.path" class="flex flex-col gap-4 w-full">
           <div class="flex flex-col">
-            <p class="text-xs pt-2 sm:text-sm">{{ post.date }}</p>
+            <p class="text-xs pt-2 ">{{ post.date }}</p>
             <NuxtLink :to="post.path" class="flex items-start justify-between text-lg font-semibold">
               {{ post.title }}
               <LucideChevronRight class="mt-1" />
             </NuxtLink>
           </div>
           <div class="flex items-center gap-2">
-            <p v-for="tag in post.tags" :key="tag" class="bg-zinc-900 px-2 h-fit rounded-sm text-xs">
+            <p v-for="tag in post.tags" :key="tag" class="bg-accent px-2 h-fit rounded-sm text-xs">
               #{{ tag }}
             </p>
           </div>
