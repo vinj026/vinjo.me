@@ -88,6 +88,11 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
   },
+  fonts: {
+    families: [
+      { name: 'JetBrains Mono', provider: 'google' },
+    ]
+  },
   runtimeConfig: {
     public: {
       MAPTILER_KEY: process.env.NUXT_PUBLIC_MAPTILER_KEY

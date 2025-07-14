@@ -38,12 +38,11 @@ onMounted(() => {
 </script>
 <template>
   <div class="flex flex-col gap-2 w-full">
-    <Transition
-enter-active-class="transition duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
+    <Transition enter-active-class="transition duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
       enter-from-class="opacity-0 translate-y-2" enter-to-class="opacity-100 translate-y-0"
       leave-active-class="transition duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
       leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-2" mode="out-in">
-      <h1 :key="greetings.selectedLang" class=" font-bold tracking-tight">
+      <h1 :key="greetings.selectedLang" class="min-h-1 font-bold tracking-tight">
         {{ greetings.selectedLang }}
       </h1>
     </Transition>

@@ -120,7 +120,6 @@ body,
 #__nuxt {
   height: 100vh;
   color: #f9f9f9;
-  font-family: "JetBrains Mono", monospace;
   @apply bg-background text-foreground;
 
 }
