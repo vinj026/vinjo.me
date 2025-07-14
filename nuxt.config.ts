@@ -82,7 +82,8 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow' },
       ],
       htmlAttrs: {
-        class: 'dark'
+        class: 'dark',
+        lang: 'en'
       },
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
