@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     'nuxt-lucide-icons',
     '@nuxtjs/leaflet',
     'motion-v/nuxt',
-    'nuxt-booster'
   ],
   components: [{
     path: '~/components/sections',
