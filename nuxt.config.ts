@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          // Theme used in all color schemes.
           theme: 'vitesse-dark',
           langs: [
             'c',
