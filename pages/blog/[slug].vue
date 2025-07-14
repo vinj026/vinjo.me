@@ -40,11 +40,11 @@ const scrollToTop = () => {
 
 
 
-      <article
-class="prose prose-sm
+      <article class="prose prose-sm
   prose-pre:bg-card 
-  prose-hr:border
+  prose-hr:border-primary/20
   prose-table:border 
+        prose-p:text-primary/75
   prose-th:border  prose-th:p-2
   prose-td:border  prose-td:p-2
   dark:prose-invert max-w-none text-justify">
