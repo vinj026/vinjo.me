@@ -5,7 +5,6 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const apiKey = config.MAPTILER_KEY
 
-  // y datang sebagai '515.png', harus dibersihkan
   const yClean = y?.replace('.png', '')
 
   if (!z || !x || !yClean) {
