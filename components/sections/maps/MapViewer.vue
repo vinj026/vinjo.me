@@ -20,10 +20,12 @@ class="bg-black-900 text-xs text-zinc-300 font-medium px-3 py-1 rounded-xl borde
     </div>
 
     <LMap
-:zoom="12" :center="center" :use-global-leaflet="false"
+:zoom="5" :center="center" :use-global-leaflet="false"
       :options="{ zoomControl: false, attributionControl: false, dragging: false, touchZoom: false }"
       class="grayscale brightness-[0.45]  h-full min-h-full w-full rounded-2xl outline-none">
-      <LTileLayer :url="'/api/maptile/{z}/{x}/{y}.webp'" layer-type="base" />
+      <LTileLayer
+:url="'/api/maptile/{z}/{x}/{y}.webp'" layer-type="base"
+        :options="{ tileSize: 512, directRetina: true, zoomOffset: -1 }" />
     </LMap>
     <div className='absolute inset-0 flex items-center justify-center'>
       <span class="relative flex size-3"> <span
