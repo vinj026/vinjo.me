@@ -1,12 +1,12 @@
 <script setup>
-
+import L from 'leaflet'
 const center = [-1.23919, 116.85869] // Balikpapan
 </script>
 
 
 <template>
 
-  <div class="relative h-40 md:h-full group ">
+  <div class="relative h-64 md:h-full group ">
     <div class="absolute z-10 left-3 bottom-3 flex items-center gap-1">
       <div class="p-2 bg-black-900 rounded-2xl border border-black-600">
         <LucideMapPin class="w-3 h-3 text-zinc-300" />
@@ -22,9 +22,11 @@ const center = [-1.23919, 116.85869] // Balikpapan
     <LMap :zoom="10" :center="center" :min-zoom="0" :max-zoom="50" :scroll-wheel-zoom="false"
       :options="{ zoomControl: false, attributionControl: false, dragging: false, touchZoom: false }"
       class="grayscale brightness-[0.45]  h-full min-h-full w-full rounded-2xl outline-none">
-      <LTileLayer :detect-retina="true" :tile-size="256" :url="'/api/maptile/{z}/{x}/{y}.png'" />
+      <LTileLayer :url="'/api/maptile/{z}/{x}/{y}.png'" :options="{
+        tileSize: 256,
+        detectRetina: true
+      }" />
     </LMap>
-
     <div className='absolute inset-0 flex items-center justify-center'>
       <span class="relative flex size-3"> <span
           class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-55" /> <span
