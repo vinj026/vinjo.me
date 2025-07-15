@@ -1,5 +1,4 @@
 <script setup>
-import L from 'leaflet'
 const center = [-1.23919, 116.85869] // Balikpapan
 </script>
 
@@ -22,7 +21,7 @@ const center = [-1.23919, 116.85869] // Balikpapan
     <LMap :zoom="10" :center="center" :min-zoom="0" :max-zoom="50" :scroll-wheel-zoom="false"
       :options="{ zoomControl: false, attributionControl: false, dragging: false, touchZoom: false }"
       class="grayscale brightness-[0.45]  h-full min-h-full w-full rounded-2xl outline-none">
-      <LTileLayer :url="'/api/maptile/{z}/{x}/{y}.png'" :options="{
+      <LTileLayer :url="'/api/maptile/{z}/{x}/{y}.webp'" :options="{
         tileSize: 256,
         detectRetina: true
       }" />

@@ -5,14 +5,14 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const apiKey = config.MAPTILER_KEY
 
-  const yClean = y?.replace('.png', '')
+  const yClean = y?.replace('.webp', '')
 
   if (!z || !x || !yClean) {
     console.error('Missing tile params:', { z, x, y })
     return sendError(event, createError({ statusCode: 400, statusMessage: 'Missing tile parameters' }))
   }
 
-  const url = `https://api.maptiler.com/maps/streets-v2-dark/${z}/${x}/${yClean}.png?key=${apiKey}`
+  const url = `https://api.maptiler.com/maps/streets-v2-dark/${z}/${x}/${yClean}.webp?key=${apiKey}`
   const res = await fetch(url)
 
   if (!res.ok) {
