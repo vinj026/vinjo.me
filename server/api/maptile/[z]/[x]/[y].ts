@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const headers = new Headers(res.headers)
-  headers.set('Cache-Control', 'max-age=86400')
+  headers.set('Cache-Control', 'max-age=31536000')
 
   return new Response(res.body, {
     status: res.status,
