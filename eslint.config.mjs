@@ -1,6 +1,10 @@
-// @ts-check
+
 import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt(
-  // Your custom configs here
-)
+export default withNuxt({
+  rules: {
+    'linebreak-style': ['error', 'unix'],
+    'vue/multi-word-component-names': 'off'
+  }
+})
+

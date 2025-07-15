@@ -26,7 +26,6 @@ onMounted(() => {
       i = 0
     } else {
       greetings.value.selectedLang = greetings.value.lang[i].text
-      console.log(greetings.value.lang[i].text)
       ++i
     }
   }, 3000)
