@@ -7,7 +7,7 @@ definePageMeta({
   <div class="flex flex-col gap-4 md:gap-6 w-full  ">
     <AppHeader />
     <AboutMe />
-    <div class="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-4">
+    <div class="flex flex-col  md:grid md:grid-cols-2 gap-4">
       <ClientOnly>
         <MapViewer />
       </ClientOnly>
