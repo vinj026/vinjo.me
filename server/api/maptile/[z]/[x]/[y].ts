@@ -1,5 +1,3 @@
-
-
 export default defineEventHandler(async (event) => {
   const { z, x, y } = event.context.params || {}
   const config = useRuntimeConfig()
@@ -28,4 +26,3 @@ export default defineEventHandler(async (event) => {
     headers
   })
 })
-
