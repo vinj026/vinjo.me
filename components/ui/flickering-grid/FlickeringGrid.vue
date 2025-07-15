@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script lang="ts" setup type="text/partytown">
+<script lang="ts" setup>
 import { cn } from "@/lib/utils";
 import { ref, onMounted, onBeforeUnmount, toRefs, computed } from "vue";
 

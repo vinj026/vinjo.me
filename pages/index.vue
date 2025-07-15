@@ -1,4 +1,4 @@
-<script setup type="text/partytown">
+<script setup>
 definePageMeta({
   layout: 'default'
 })
