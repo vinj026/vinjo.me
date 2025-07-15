@@ -17,7 +17,7 @@ defineProps(
               <LucideChevronRight class="mt-1" />
             </NuxtLink>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex flex-wrap items-center gap-2">
             <p v-for="tag in post.tags" :key="tag" class="bg-accent text-primary/50 px-2 h-fit rounded-sm text-xs">
               #{{ tag }}
             </p>
