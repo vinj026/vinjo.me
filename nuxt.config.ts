@@ -95,8 +95,7 @@ export default defineNuxtConfig({
     ]
   },
   runtimeConfig: {
-    public: {
-      MAPTILER_KEY: process.env.NUXT_PUBLIC_MAPTILER_KEY
-    }
+    MAPTILER_KEY: process.env.MAPTILER_KEY,
+
   }
 })
