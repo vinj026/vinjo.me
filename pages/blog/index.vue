@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: "default"
+  layout: "blog-layout"
 })
 
 const { data: posts } = await useAsyncData(() => queryCollection('blog').all())
@@ -23,14 +23,15 @@ console.log(groupedByYear.value)
 
 
 <template>
-  <div class="flex flex-col items-center w-full gap-8 mt-16">
+  <div class="flex flex-col items-center w-full gap- mt-16">
     <div class="w-full">
       <h1 class="text-2xl font-semibold">My Journal</h1>
     </div>
 
     <div class="flex flex-col w-full gap-8">
       <template v-if="Object.keys(groupedByYear).length > 0">
-        <div v-for="year in Object.keys(groupedByYear).sort((a, b) => b - a)" :key="year"
+        <div
+v-for="year in Object.keys(groupedByYear).sort((a, b) => b - a)" :key="year"
           class="flex flex-col w-full gap-2">
           <h2 class="text-lg font-medium text-zinc-100">{{ year }}</h2>
           <ul class="pl-4">

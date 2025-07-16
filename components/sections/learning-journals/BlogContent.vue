@@ -13,7 +13,7 @@ defineProps(
           <div class="flex flex-col">
             <p class="text-xs pt-2 text-primary/60 ">{{ post.date }}</p>
             <NuxtLink :to="post.path" class="flex items-start justify-between text-lg font-semibold">
-              {{ post.title }}
+              <h2> {{ post.title }} </h2>
               <LucideChevronRight class="mt-1" />
             </NuxtLink>
           </div>

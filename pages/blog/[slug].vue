@@ -1,5 +1,5 @@
 <script setup>
-definePageMeta({ layout: 'default' })
+definePageMeta({ layout: 'blog-layout' })
 
 const route = useRoute()
 
@@ -61,16 +61,19 @@ onUnmounted(() => {
         <hr class="border ">
       </header>
 
-      <article class="prose prose-sm prose-pre:bg-card prose-hr:border-primary/20 prose-table:border prose-p:text-primary/75
+      <article
+class="prose prose-sm prose-pre:bg-card prose-hr:border-primary/20 prose-table:border prose-p:text-primary/75
                prose-th:border prose-th:p-2 prose-td:border prose-td:p-2
                dark:prose-invert max-w-none text-justify">
         <ContentRenderer :value="post" />
       </article>
 
       <!-- Back to top button -->
-      <Transition enter-active-class="transition-opacity duration-300"
+      <Transition
+enter-active-class="transition-opacity duration-300"
         leave-active-class="transition-opacity duration-300" enter-from-class="opacity-0" leave-to-class="opacity-0">
-        <button v-if="isScrollingDown" class="fixed bottom-6 right-6 z-40 bg-card p-2 rounded-full border 
+        <button
+v-if="isScrollingDown" class="fixed bottom-6 right-6 z-40 bg-card p-2 rounded-full border 
                  text-xs flex items-center gap-2 text-gray-400 hover:text-white 
                  shadow-md backdrop-blur" @click="scrollToTop">
           <LucideArrowUp class="w-4 h-4" />

@@ -36,8 +36,9 @@ onMounted(() => {
 
 </script>
 <template>
-  <div class="flex flex-col gap-2 w-full">
-    <Transition enter-active-class="transition duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
+  <section class="flex flex-col gap-2 w-full">
+    <Transition
+enter-active-class="transition duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
       enter-from-class="opacity-0 translate-y-2" enter-to-class="opacity-100 translate-y-0"
       leave-active-class="transition duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
       leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-2" mode="out-in">
@@ -51,5 +52,5 @@ onMounted(() => {
       No fancy goals, just a way to understand what I’m learning, and keep everything documented
       honestly.
       It’s not a polished skill showcase — it’s a growing record of the process itself. </p>
-  </div>
+  </section>
 </template>

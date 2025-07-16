@@ -1,14 +1,8 @@
 <template>
   <div class="flex flex-col min-h-screen items-center px-2 w-full lg:max-w-3xl mx-auto gap-4">
-    <header class="flex flex-col w-full">
-      <AppNavbar class="min-h-[64px]" />
-      <AppHeader />
-    </header>
+    <AppNavbar />
     <main class="flex-1 w-full px-4 md:p-2">
       <slot />
     </main>
-    <footer>
-      <AppFooter class="min-h-[48px]" />
-    </footer>
   </div>
 </template>
