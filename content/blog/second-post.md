@@ -8,7 +8,7 @@ seo:
   title: It All Started with a Home Computer
   description: A personal reflection on growing up with technology, from childhood
     play to daily life.
-date: 2025-7-25
+date: 2025-07-25
 description: A personal reflection on growing up with technology, from childhood
   play to daily life.
 ---
