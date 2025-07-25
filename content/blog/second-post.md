@@ -23,7 +23,7 @@ That was also the first time I discovered Cheat Engine. It felt like finding a h
 
 Besides cheating games, I also created a blog on Blogger. It was a mix of everything. Personal posts, template shares, screenshots. But that was also how I learned to edit HTML, add widgets, and customize layouts. Without realizing it, I was building the foundation of my web dev skills.
 
-I also joined some tech groups that occasionally crossed into hacking topics. Some people shared how to claim crypto airdrops or trade scripts for Bitcoin. Yes, I actually had some Bitcoin back then. I got it from faucets and airdrops. I even traded some for game cheats. And the wallet is still around. 👉 My wallet
+I also joined some tech groups that occasionally crossed into hacking topics. Some people shared how to claim crypto airdrops or trade scripts for Bitcoin. Yes, I actually had some Bitcoin back then. I got it from faucets and airdrops. I even traded some for game cheats. And the wallet is still around. [👉 My wallet](https://www.blockchain.com/explorer/addresses/btc/1BnWDqPpfrX6QEBrNVy6KMtGD8PNSCMsLB)
 
 In middle school things slowly started to change. The cheat groups died down and Facebook games faded away. People moved to platforms like Instagram when the logo was still brown, Path, and the older version of YouTube. I followed the trend. Played around with Ask.fm, chatted every day on LINE, sent silly stickers, and posted dramatic status updates. During that phase I wasn’t coding. Not because I stopped liking it, I was just distracted by the social side of the internet.
 
