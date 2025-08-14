@@ -3,6 +3,7 @@
     <AppNavbar />
     <main class="flex-1 w-full px-4 md:p-2">
       <slot />
+      <AppFooter/>
     </main>
   </div>
 </template>
