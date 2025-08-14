@@ -11,6 +11,10 @@ seo:
 date: 2025-07-25
 description: A personal reflection on growing up with technology, from childhood
   play to daily life.
+navigation:
+  title: It All Started with a Home Computer
+  description: A personal reflection on growing up with technology, from childhood
+    play to daily life.
 ---
 
 Sometimes I just sit and think, “Damn, time really flies.” It's already 2025, and I'm 24. Looking back, my life feels like a series of small experiments. From playing games, messing with scripts, and eventually getting into the world of IT. And it all started with one thing: our home computer.
