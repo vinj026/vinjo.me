@@ -22,10 +22,10 @@
           <span class="ml-1">echo $TOOLS_I_USE</span>
         </p>
         <div class="flex flex-col gap-2 ">
-          <p class="text-xs">🖥️ <span class="text-sky-400">Terminal</span> : Kitty + Zsh</p>
+          <p class="text-xs">🖥️ <span class="text-sky-400">Terminal</span> : Kitty + fish</p>
           <p class="text-xs">🧠 <span class="text-pink-400">Editor</span> : Neovim</p>
           <p class="text-xs">💾 <span class="text-indigo-300">OS</span> : EndeavourOS</p>
-          <p class="text-xs">🪟 <span class="text-emerald-400">WM</span> : Hyprland (Wayland)</p>
+          <p class="text-xs">🪟 <span class="text-emerald-400">WM</span> : LABWC</p>
           <p class="text-xs">🕸️ <span class="text-amber-400">Web Stack</span> : HTML, CSS, JavaScript, Talwind, Vue,
             Nuxt, GIT</p>
 

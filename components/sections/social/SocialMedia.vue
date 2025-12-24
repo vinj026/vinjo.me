@@ -17,8 +17,8 @@ const socialMedia = ref([
   {
     icon: Mail,
     title: 'Email',
-    username: 'vinjonathan@gmail.com',
-    link: 'mailto:vinj026@email.com',
+    username: 'vinjonathan26@gmail.com',
+    link: 'mailto:vinjonathan26@gmail.com',
   },
   // {
   //   icon: FileText,

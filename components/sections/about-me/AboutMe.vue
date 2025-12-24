@@ -48,9 +48,7 @@ enter-active-class="transition duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] tra
     </Transition>
 
     <p class="text-justify leading-relaxed ">
-      I use this site to keep track of my learning process — so I can see how far I’ve come and where I’m heading.
-      No fancy goals, just a way to understand what I’m learning, and keep everything documented
-      honestly.
-      It’s not a polished skill showcase — it’s a growing record of the process itself. </p>
+     A personal space to explore, build, and refine ideas over time — without the pressure of turning everything into a showcase.
+This site exists to support steady progress, experimentation, and practical learning through real work.</p>
   </section>
 </template>
